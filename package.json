@@ -7,7 +7,8 @@
     "start": "electron .",
     "build": "electron-builder --win --x64",
     "build-win": "electron-packager . \"Aprendiendo con Puertas\" --platform=win32 --arch=x64 --out=dist --overwrite --asar",
-    "package-exe": "node package-exe.js"
+    "package-exe": "node package-exe.js",
+    "build:web": "node build-web.js"
   },
   "keywords": [
     "educacion",
