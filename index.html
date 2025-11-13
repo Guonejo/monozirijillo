@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo con Puertas - Para Niños Preescolares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <h1 class="welcome-title">¡Bienvenido!</h1>
+            <div class="welcome-animation">
+                <div class="bouncing-ball ball1"></div>
+                <div class="bouncing-ball ball2"></div>
+                <div class="bouncing-ball ball3"></div>
+                <div class="bouncing-ball ball4"></div>
+                <div class="bouncing-ball ball5"></div>
+            </div>
+            <p class="welcome-text">¡Vamos a aprender jugando!</p>
+            <button id="start-button" class="start-button">Comenzar</button>
+        </div>
+    </div>
+
+    <!-- Pantalla Principal del Juego -->
+    <div id="game-screen" class="game-screen hidden">
+        <h2 class="game-title">¡Abre las puertas y descubre qué hay dentro!</h2>
+        <div class="doors-container">
+            <div class="door-wrapper" data-item="Auto" data-letter="A">
+                <div class="door door-red">
+                    <div class="door-handle"></div>
+                </div>
+                <div class="door-label">Puerta 1</div>
+            </div>
+            <div class="door-wrapper" data-item="Elefante" data-letter="E">
+                <div class="door door-blue">
+                    <div class="door-handle"></div>
+                </div>
+                <div class="door-label">Puerta 2</div>
+            </div>
+            <div class="door-wrapper" data-item="Isla" data-letter="I">
+                <div class="door door-green">
+                    <div class="door-handle"></div>
+                </div>
+                <div class="door-label">Puerta 3</div>
+            </div>
+            <div class="door-wrapper" data-item="Oso" data-letter="O">
+                <div class="door door-yellow">
+                    <div class="door-handle"></div>
+                </div>
+                <div class="door-label">Puerta 4</div>
+            </div>
+            <div class="door-wrapper" data-item="Unicornio" data-letter="U">
+                <div class="door door-rainbow">
+                    <div class="door-handle"></div>
+                </div>
+                <div class="door-label">Puerta 5</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar el contenido de la puerta -->
+    <div id="item-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <div class="item-display">
+                <div id="item-icon" class="item-icon"></div>
+                <h3 id="item-name" class="item-name"></h3>
+                <p id="item-letter" class="item-letter"></p>
+                <button id="repeat-button" class="repeat-button">🔊 Repetir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

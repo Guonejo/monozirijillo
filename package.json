@@ -1,0 +1,46 @@
+{
+  "name": "aprendiendo-con-puertas",
+  "version": "1.0.0",
+  "description": "Aplicación educativa interactiva para niños preescolares",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build-win": "electron-packager . \"Aprendiendo con Puertas\" --platform=win32 --arch=x64 --out=dist --overwrite --asar",
+    "package-exe": "node package-exe.js"
+  },
+  "keywords": [
+    "educacion",
+    "preescolar",
+    "niños"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.1"
+  },
+  "build": {
+    "appId": "com.aprendiendo.puertas",
+    "productName": "Aprendiendo con Puertas",
+    "win": {
+      "target": "portable",
+      "sign": false,
+      "signDlls": false,
+      "verifyUpdateCodeSignature": false,
+      "artifactName": "${productName}.exe"
+    },
+    "portable": {
+      "artifactName": "${productName}.exe"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
+
