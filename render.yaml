@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aprendiendo-con-puertas
+    env: static
+    buildCommand: npm install && npm run build:web
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
